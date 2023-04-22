@@ -1,0 +1,29 @@
+{
+    "storage_layout": {
+        "favoriteNumber": {
+            "type": "uint256",
+            "slot": 0
+        },
+        "someBool": {
+            "type": "bool",
+            "slot": 1
+        },
+        "myArray": {
+            "type": "uint256[1000]",
+            "slot": 2
+        },
+        "myArrayLength": {
+            "type": "uint256",
+            "slot": 1002
+        },
+        "myMap": {
+            "type": "HashMap[uint256, bool]",
+            "slot": 1003
+        },
+        "i_not_in_storage": {
+            "type": "uint256",
+            "slot": 1004
+        }
+    },
+    "code_layout": {}
+}

@@ -1,0 +1,8 @@
+name: ape-fund-me-v23
+contracts_folder: contracts
+deployments:
+  ethereum:
+    sepolia:
+      - contract_type: AggregatorV3Interface
+        address: "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+default_ecosystem: ethereum
