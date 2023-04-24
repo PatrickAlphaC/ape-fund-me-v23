@@ -9,9 +9,7 @@ from scripts.helper_functions import DECIMALS, INITIAL_VALUE
 load_dotenv()
 
 
-FUND_ME_LOCATION = "contracts/FundMe.vy"
-MOCK_AGGREGATOR_LOCATION = "contracts/test/MockV3Aggregator.vy"
-SEND_VALUE = 1_000_000_000_000_000_000  # 1 ether
+SEND_VALUE = ape.convert("1 ETH", int)
 
 
 @pytest.fixture(scope="module")
@@ -32,9 +30,9 @@ def fund_me_contract_ape(wallet_password) -> ape.contracts.base.ContractInstance
 
 
 @pytest.fixture
-def fund_me_boa() -> boa.vyper.contract.VyperContract:
-    aggregator = boa.load(MOCK_AGGREGATOR_LOCATION, DECIMALS, INITIAL_VALUE)
-    return boa.load(FUND_ME_LOCATION, aggregator.address)
+def fund_me_boa(project) -> boa.vyper.contract.VyperContract:
+    aggregator = boa.load(project.MockV3Aggregator.source_path, DECIMALS, INITIAL_VALUE)
+    return boa.load(project.FundMe.source_path, aggregator.address)
 
 
 @pytest.fixture
