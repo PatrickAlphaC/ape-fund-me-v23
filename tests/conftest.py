@@ -9,7 +9,7 @@ from scripts.helper_functions import DECIMALS, INITIAL_VALUE
 load_dotenv()
 
 
-SEND_VALUE = 1_000_000_000_000_000_000  # 1 ether
+SEND_VALUE = ape.convert("1 ETH", int)
 
 
 @pytest.fixture(scope="module")
