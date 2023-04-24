@@ -38,7 +38,7 @@ cd ape-fund-me-v23
 
 ```bash
 poetry install 
-poetry run ape plugins install alchemy vyper ape-etherscan
+poetry run ape plugins install alchemy vyper etherscan
 ```
 
 3. Run unit tests
